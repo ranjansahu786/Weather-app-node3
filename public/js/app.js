@@ -1,5 +1,3 @@
-console.log('client side java script')
-
 const weartherform = document.querySelector('form')
 const address = document.querySelector('input')
 const messageone=document.querySelector('#message-1')
