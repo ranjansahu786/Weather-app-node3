@@ -2,6 +2,8 @@ const request=require('request')
 const path=require('path')
 const express=require('express')
 const app=express()
+const port=process.env.PORT
+
 const hbs=require('hbs')
 const forecast=require('./utils/forecast')
 const geocode=require('./utils/geocode')
@@ -57,6 +59,6 @@ app.get('*',(req,res)=>{
     res.send('404 ERROR page not found')
 })
 
-app.listen(3000,()=>{
-    console.log("web server local host 3000")
+app.listen(port,()=>{
+    console.log("web server local host "+port)
 }) 
