@@ -10,7 +10,7 @@ const request=require('request')
         }
         else{
             callbacks(undefined,{discription:response.body.daily.summary,temperature:response.body.hourly.data[0].temperature,
-                latitude:response.body.latitude,longitude:response.body.longitude,location:response.body.timezone})
+                latitude:response.body.latitude,longitude:response.body.longitude,location:response.body.timezone,temperatureMin:response.body.daily.data[0].temperatureLow,temperatureHigh:response.body.daily.data[0].temperatureHigh})
         }
     })
 }
